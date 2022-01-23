@@ -25,7 +25,6 @@ twilioRouter.post('/', function(req, res, next) {
 
 twilioRouter.options('/', function(req, res, next) {
   const receiver = req.body.number
-  res.header('Content-Type', 'application/json')
   const randomFunFacts = ["ff1", "ff2", 'ff3', 'ff4', 'ff5']
   const funFact = randomFunFacts[Math.floor(Math.random() * (4))]
   client.messages.create({
