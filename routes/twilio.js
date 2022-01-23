@@ -7,7 +7,7 @@ const client = require('twilio')(config.ACCOUNT_SID, config.AUTH_TOKEN)
 /* GET home page. */
 twilioRouter.post('/', function(req, res, next) {
   const receiver = req.body.number
-  response.header('Content-Type', 'application/json')
+  res.header('Content-Type', 'application/json')
   const randomFunFacts = ["ff1", "ff2", 'ff3', 'ff4', 'ff5']
   const funFact = randomFunFacts[Math.floor(Math.random() * (4))]
   client.messages.create({
